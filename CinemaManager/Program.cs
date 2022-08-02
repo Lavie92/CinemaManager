@@ -16,7 +16,7 @@ namespace CinemaManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormCinema());
+            Application.Run(new frmMain());
         }
     }
 }

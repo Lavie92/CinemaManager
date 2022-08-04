@@ -17,7 +17,14 @@ namespace CinemaManager
         {
             InitializeComponent();
             SetMenu(false);
+            this.Load += FrmMain_Load;
         }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            this.LoginToolStripMenuItem.PerformClick();
+        }
+
         private void SetMenu(bool status)
         {
             this.LogoutToolStripMenuItem.Enabled = status;
@@ -28,15 +35,24 @@ namespace CinemaManager
         }
         private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //if (this.MdiChildren.Any(x => x.Name == "frmLogin"))
-            //{
-            //    this.MdiChildren.FirstOrDefault(x => x.Name == "frmLogin").Activate();
-            //    return;
-            //}
+            if (this.MdiChildren.Any(x => x.Name == "frmLogin"))
+            {
+                this.MdiChildren.FirstOrDefault(x => x.Name == "frmLogin").Activate();
+                return;
+            }
             frmLogin frmLogin = new frmLogin();
-            //frmLogin.MdiParent = this;
+            frmLogin.MdiParent = this;
             frmLogin.DelegateLogin += frmLoginDelegateLogin;
-            frmLogin.ShowDialog();
+            frmLogin.Show();
+        }
+        private bool OpenChildForm(string formName)
+        {
+            if (this.MdiChildren.Any(x => x.Name == formName))
+            {
+                this.MdiChildren.FirstOrDefault(x => x.Name == formName).Activate();
+                return true;
+            }
+            return false;
         }
         private void frmLoginDelegateLogin(object sender)
         {
@@ -50,6 +66,16 @@ namespace CinemaManager
                 this.BillToolStripMenuItem.Enabled = true;
             }
             //}
+        }
+
+        private void TicketSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!OpenChildForm("frmTicket")) {
+                frmTicket frmTicket = new frmTicket();
+                //frmTicket.MdiParent = this;
+                frmTicket.StartPosition = FormStartPosition.CenterScreen;
+                frmTicket.ShowDialog();
+            }
         }
     }
 }

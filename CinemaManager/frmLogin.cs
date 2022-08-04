@@ -25,8 +25,7 @@ namespace CinemaManager
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            if (CinemaContext.Accounts.Any (x=> x.Username == username && x.Password == password))
-
+            if (CinemaContext.Accounts.Any(x => x.Username == username && x.Password == password))
             {
                 List<int> listRole = CinemaContext.Accounts.Include("Permissions").FirstOrDefault(x => x.Password == password && x.Username == username).Permissions.Select(x => x.RoleId).ToList();
                 if (listRole.Contains(CinemaContext.Roles.FirstOrDefault(x => x.RoleName == "admin").RoleId))
@@ -41,7 +40,7 @@ namespace CinemaManager
             }
             else
             {
-                MessageBox.Show("Sai mật khẩu!");
+                MessageBox.Show("Sai MK");
             }
             this.Close();
         }

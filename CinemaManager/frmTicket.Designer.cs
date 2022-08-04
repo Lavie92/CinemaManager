@@ -1,6 +1,6 @@
 ﻿namespace CinemaManager
 {
-    partial class FormCinema
+    partial class frmTicket
     {
         /// <summary>
         /// Required designer variable.
@@ -36,6 +36,8 @@
             this.btnSelect = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnEnd = new System.Windows.Forms.Button();
+            this.cbxCustomer = new System.Windows.Forms.ComboBox();
+            this.lblCustomer = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,11 +122,30 @@
             this.btnEnd.UseVisualStyleBackColor = true;
             this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
-            // FormCinema
+            // cbxCustomer
+            // 
+            this.cbxCustomer.FormattingEnabled = true;
+            this.cbxCustomer.Location = new System.Drawing.Point(382, 537);
+            this.cbxCustomer.Name = "cbxCustomer";
+            this.cbxCustomer.Size = new System.Drawing.Size(121, 21);
+            this.cbxCustomer.TabIndex = 5;
+            // 
+            // lblCustomer
+            // 
+            this.lblCustomer.AutoSize = true;
+            this.lblCustomer.Location = new System.Drawing.Point(290, 545);
+            this.lblCustomer.Name = "lblCustomer";
+            this.lblCustomer.Size = new System.Drawing.Size(65, 13);
+            this.lblCustomer.TabIndex = 6;
+            this.lblCustomer.Text = "Khách hàng";
+            // 
+            // frmTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 615);
+            this.Controls.Add(this.lblCustomer);
+            this.Controls.Add(this.cbxCustomer);
             this.Controls.Add(this.btnEnd);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSelect);
@@ -134,7 +155,7 @@
             this.Controls.Add(this.pnSeat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "FormCinema";
+            this.Name = "frmTicket";
             this.Text = "CinemaManager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -153,6 +174,8 @@
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnEnd;
+        private System.Windows.Forms.ComboBox cbxCustomer;
+        private System.Windows.Forms.Label lblCustomer;
     }
 }
 

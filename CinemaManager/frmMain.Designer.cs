@@ -62,14 +62,14 @@
             // LoginToolStripMenuItem
             // 
             this.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem";
-            this.LoginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LoginToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.LoginToolStripMenuItem.Text = "Đăng nhập";
             this.LoginToolStripMenuItem.Click += new System.EventHandler(this.LoginToolStripMenuItem_Click);
             // 
             // LogoutToolStripMenuItem
             // 
             this.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem";
-            this.LogoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.LogoutToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.LogoutToolStripMenuItem.Text = "Đăng xuất";
             // 
             // ManagerToolStripMenuItem
@@ -85,19 +85,20 @@
             // TicketSaleToolStripMenuItem
             // 
             this.TicketSaleToolStripMenuItem.Name = "TicketSaleToolStripMenuItem";
-            this.TicketSaleToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.TicketSaleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.TicketSaleToolStripMenuItem.Text = "Bán vé";
+            this.TicketSaleToolStripMenuItem.Click += new System.EventHandler(this.TicketSaleToolStripMenuItem_Click);
             // 
             // BillToolStripMenuItem
             // 
             this.BillToolStripMenuItem.Name = "BillToolStripMenuItem";
-            this.BillToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.BillToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.BillToolStripMenuItem.Text = "Hoá đơn";
             // 
             // CustomerToolStripMenuItem
             // 
             this.CustomerToolStripMenuItem.Name = "CustomerToolStripMenuItem";
-            this.CustomerToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.CustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.CustomerToolStripMenuItem.Text = "Khách hàng";
             // 
             // frmMain

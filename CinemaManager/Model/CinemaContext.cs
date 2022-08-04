@@ -15,5 +15,9 @@ namespace CinemaManager.Model
         public virtual DbSet<Account> Accounts { get; set; }
         public virtual DbSet<Permission> Permissions { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Bill> Bills { get; set; }
+        public virtual DbSet <BillDetail> BillDetails { get; set; }
+
     }
 }
